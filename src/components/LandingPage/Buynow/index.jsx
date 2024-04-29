@@ -327,7 +327,7 @@ const Buynow = () => {
                   <b>
                     Your Holdings:{' '}
                     <span style={{ color: 'var(--yellow)' }}>
-                      {_.round(totalToken, 2)} Kojo
+                      {_.round(totalToken, 2)} MHG
                     </span>
                   </b>
                 </p>
@@ -363,7 +363,7 @@ const Buynow = () => {
                 </div>
                 <div className="col-md-6">
                   <div className="d-flex mb-2">
-                    <label>KOJO Received Amount:</label>
+                    <label>MHG Received Amount:</label>
                   </div>
                   <div className="form-input">
                     <input

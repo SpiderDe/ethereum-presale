@@ -200,10 +200,10 @@ export default function Index() {
                       <span>PHASE 2</span>
                     </div>
                     <div className="phase-details">
-                      <h4>Launch on Solana</h4>
+                      <h4>Launch on Ethereum</h4>
                       <div>
                         <span>Build Community</span>
-                        <span>Dexscreener and Birdeye Update</span>
+                        <span>Dexscreener and Uniswap Update</span>
                       </div>
                     </div>
                   </li>

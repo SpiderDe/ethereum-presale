@@ -186,13 +186,13 @@ function App() {
 
       <div className="card gap-4 flex flex-col p-8 my-[40px]" id="contact">
         <div className="text-[3rem] text-center uppercase">Our Community</div>
-        <div className="picture-container">
+        <div className="picture-container my-4">
           <img src="/images/comunity-1.jpeg" alt="Picture 1" className="picture"/>
           <img src="/images/comunity-2.jpeg" alt="Picture 2" className="picture" />
           <img src="/images/comunity-3.jpeg" alt="Picture 3" className="picture" />
           <img src="/images/about.jpeg" alt="Picture 4" className="picture" />
         </div>
-        <div className="flex justify-evenly my-[40px]">
+        <div className="flex flex-wrap gap-4 justify-evenly my-[40px]">
           <button className="uppercase flex gap-3 items-center p-1 px-5 border-blue-500 border-[1px] rounded-2xl transition-all ease-in-out duration-300">
             <label className="uppercase">Telegram</label>
             <TelegramIcon />

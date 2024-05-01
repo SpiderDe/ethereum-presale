@@ -40,7 +40,8 @@ button:hover {
 
 .picture-container {
   position: relative;
-  height: 300px; /* Adjust the height as needed */
+  height: 300px;
+  border-radius: 20px; /* Adjust the height as needed */
   overflow: hidden;
 }
 
@@ -48,6 +49,7 @@ button:hover {
   position: absolute;
   top: 0%;
   height: 300px; 
+  border-radius: 20px;
   opacity: 0; /* Initially hidden */
   animation: flowSideWays 16s linear infinite; /* Animation name, duration, timing function, iteration count */
 }

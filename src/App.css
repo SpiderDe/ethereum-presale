@@ -37,3 +37,57 @@ button:hover {
     transform: scale(1.1); /* Final scale */
   }
 }
+
+.picture-container {
+  position: relative;
+  height: 300px; /* Adjust the height as needed */
+  overflow: hidden;
+}
+
+.picture {
+  position: absolute;
+  top: 0%;
+  height: 300px; 
+  opacity: 0; /* Initially hidden */
+  animation: flowSideWays 16s linear infinite; /* Animation name, duration, timing function, iteration count */
+}
+
+@keyframes flowSideWays {
+  0% {
+    left: 0%; /* Initial position at left edge */
+    opacity: 0; /* Initially hidden */
+  }
+  25% {
+    left: 25%; /* Move to 25% of container width */
+    opacity: 1; /* Gradually appear */
+  }
+  50% {
+    left: 50%; /* Move to 50% of container width */
+    opacity: 1; /* Stay visible */
+  }
+  75% {
+    left: 75%; /* Move to 75% of container width */
+    opacity: 1; /* Stay visible */
+  }
+  100% {
+    left: 100%; /* Move to right edge */
+    opacity: 0; /* Gradually fade out */
+  }
+}
+
+/* Adjust the delay for each picture */
+.picture:nth-child(1) {
+  animation-delay: 0s; /* Start immediately */
+}
+
+.picture:nth-child(2) {
+  animation-delay: 4s; /* Start after 1 second */
+}
+
+.picture:nth-child(3) {
+  animation-delay: 8s; /* Start after 2 seconds */
+}
+
+.picture:nth-child(4) {
+  animation-delay: 12s; /* Start after 2 seconds */
+}

@@ -6,7 +6,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="w-full h-full bg-[#0244a566] overflow-auto overflow-x-hidden px-[15%]">
+    <div className="w-full h-full bg-[#0244a566] overflow-auto overflow-x-hidden px-[10px] lg:px-[15%]">
       <div className="flex justify-between items-center p-4">
         <img src="/images/label.png" width="140px"></img>
         <div className="flex gap-8">
@@ -101,7 +101,7 @@ function App() {
             integrity of transactions.
           </p>
         </div>
-        <div className="flex items-end">
+        <div className="flex items-center justify-center">
           <img
             className="rounded-3xl"
             src="/images/about.jpeg"
@@ -110,11 +110,13 @@ function App() {
         </div>
       </div>
 
-      <div className="border-[1px] border-white my-[80px]"></div>
-
       <div className="card flex flex-wrap gap-4 p-8 my-[40px]" id="about">
         <div className="flex items-center">
-          <img className="pulsate rounded-3xl" src="/images/1.png" width="600px"></img>
+          <img
+            className="pulsate rounded-3xl"
+            src="/images/1.png"
+            width="600px"
+          ></img>
         </div>
 
         <div className="flex-1 flex flex-col gap-8" id="how-to-buy">
@@ -144,7 +146,10 @@ function App() {
               </p>
             </div>
             <div className="border-[1px] border-white rounded-xl p-4 hover:scale-105 transition-all ease-in-out duration-300">
-              <div className="flex items-center gap-4">3. Converting Ethereum to <img src="/images/logo.png" width="40px"></img></div>
+              <div className="flex items-center gap-4">
+                3. Converting Ethereum to{" "}
+                <img src="/images/logo.png" width="40px"></img>
+              </div>
               <p className="font-light text-[1rem]">
                 Click the 'Connect Wallet' button to connect your wallet to the
                 page and enter the amount of Ether you want to pay in the
@@ -157,34 +162,51 @@ function App() {
             <div className="border-[1px] border-white rounded-xl p-4 hover:scale-105 transition-all ease-in-out duration-300">
               <label>4. Safety Tips</label>
               <p className="font-light text-[1rem]">
-              Always double-check the wallet addresses before making any
-                      transactions. Ensure that you're sending funds to the
-                      correct address to avoid loss of funds due to human error
-                      or phishing attacks.
+                Always double-check the wallet addresses before making any
+                transactions. Ensure that you're sending funds to the correct
+                address to avoid loss of funds due to human error or phishing
+                attacks.
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="border-[1px] border-white my-[80px]"></div>
+      {/* <div className="card flex flex-wrap gap-4 p-8 my-[40px]" id="roadmap">
+        <div className="text-[3rem] text-center uppercase">Our RoadMap</div>
+      </div> */}
 
-      <div className="flex justify-evenly my-[40px]">
-        <button className="uppercase flex gap-3 items-center p-1 px-5 border-blue-500 border-[1px] rounded-2xl transition-all ease-in-out duration-300">
-          <label className="uppercase">Telegram</label>
-          <TelegramIcon />
-        </button>
-        <button className="uppercase flex gap-3 items-center p-1 px-5 border-blue-500 border-[1px] rounded-2xl transition-all ease-in-out duration-300">
-          <label className="uppercase">Twitter</label>
-          <TwitterIcon />
-        </button>
-        <button className="uppercase flex gap-3 items-center p-1 px-5 border-blue-500 border-[1px] rounded-2xl transition-all ease-in-out duration-300">
-          <label className="uppercase">discord</label>
-          <DiscordIcon />
-        </button>
+      <div className="card flex flex-wrap gap-4 p-8 my-[40px]" id="tokenomics">
+        <img
+          className="rounded-3xl hover:scale-105 transition-all ease-in-out duration-300"
+          src="/images/tokenomics.png"
+          width="100%"
+        ></img>
       </div>
 
-      <div className="border-[1px] border-white my-[80px]"></div>
+      <div className="card gap-4 flex flex-col p-8 my-[40px]" id="contact">
+        <div className="text-[3rem] text-center uppercase">Our Community</div>
+        <div className="picture-container">
+          <img src="/images/comunity-1.jpeg" alt="Picture 1" className="picture"/>
+          <img src="/images/comunity-2.jpeg" alt="Picture 2" className="picture" />
+          <img src="/images/comunity-3.jpeg" alt="Picture 3" className="picture" />
+          <img src="/images/about.jpeg" alt="Picture 4" className="picture" />
+        </div>
+        <div className="flex justify-evenly my-[40px]">
+          <button className="uppercase flex gap-3 items-center p-1 px-5 border-blue-500 border-[1px] rounded-2xl transition-all ease-in-out duration-300">
+            <label className="uppercase">Telegram</label>
+            <TelegramIcon />
+          </button>
+          <button className="uppercase flex gap-3 items-center p-1 px-5 border-blue-500 border-[1px] rounded-2xl transition-all ease-in-out duration-300">
+            <label className="uppercase">Twitter</label>
+            <TwitterIcon />
+          </button>
+          <button className="uppercase flex gap-3 items-center p-1 px-5 border-blue-500 border-[1px] rounded-2xl transition-all ease-in-out duration-300">
+            <label className="uppercase">discord</label>
+            <DiscordIcon />
+          </button>
+        </div>
+      </div>
 
       <div className="text-center my-[40px]">
         Copyright © 2024. All rights reserved.

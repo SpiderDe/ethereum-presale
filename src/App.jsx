@@ -30,9 +30,9 @@ function App() {
               Roadmap
             </label>
           </a>
-          <a href="#faq">
+          <a href="#tokenomics">
             <label className="transition-all ease-in-out duration-300 hover:text-blue-800">
-              FAQ
+              Tokenomics
             </label>
           </a>
           <a href="#contact">
@@ -60,7 +60,7 @@ function App() {
         <div className="flex flex-col justify-center gap-[20px]">
           <label className="uppercase">introducing</label>
           <img
-            className="transition-all ease-in-out duration-300 hover:scale-110"
+            className="transition-all ease-in-out duration-300 hover:scale-110 pulsate"
             src="/images/label.png"
             width="400px"
           ></img>
@@ -85,7 +85,7 @@ function App() {
       <div className="card flex flex-wrap gap-4 p-8" id="about">
         <div className="flex-1 flex flex-col gap-8">
           <div className="text-[3rem] text-center uppercase">About Us</div>
-          <p className="font-medium">
+          <p className="font-normal">
             Money Hungry Gorillas (MHG) is a cryptocurrency token designed to
             provide users with a unique and innovative financial experience. As
             its name suggests, MHG embodies a spirit of financial ambition and
@@ -103,7 +103,7 @@ function App() {
         </div>
         <div className="flex items-center justify-center">
           <img
-            className="rounded-3xl"
+            className="rounded-3xl transition-all ease-in-out duration-300 hover:scale-110"
             src="/images/about.jpeg"
             width="600px"
           ></img>
@@ -124,7 +124,7 @@ function App() {
           <div className="flex flex-col gap-[20px]">
             <div className="border-[1px] border-white rounded-xl p-4 hover:scale-105 transition-all ease-in-out duration-300">
               <label>1. Setting up a Cryptocurrency Wallet</label>
-              <p className="font-light text-[1rem]">
+              <p className="font-normal text-[1rem]">
                 Choose a reputable cryptocurrency wallet that supports
                 Ethereum-based tokens like MHG. Popular options include
                 MetaMask, Trust Wallet, and MyEtherWallet. Visit the official
@@ -136,7 +136,7 @@ function App() {
             </div>
             <div className="border-[1px] border-white rounded-xl p-4 hover:scale-105 transition-all ease-in-out duration-300">
               <label>2. Adding Ethereum to Your Wallet</label>
-              <p className="font-light text-[1rem]">
+              <p className="font-normal text-[1rem]">
                 Once your wallet is set up, you'll need to acquire Ethereum
                 (ETH) to exchange for MHG tokens. You can purchase Ethereum from
                 a cryptocurrency exchange such as Coinbase, Binance, or Kraken.
@@ -150,7 +150,7 @@ function App() {
                 3. Converting Ethereum to{" "}
                 <img src="/images/logo.png" width="40px"></img>
               </div>
-              <p className="font-light text-[1rem]">
+              <p className="font-normal text-[1rem]">
                 Click the 'Connect Wallet' button to connect your wallet to the
                 page and enter the amount of Ether you want to pay in the
                 purchase widget. Then, the amount of tokens you will receive
@@ -161,7 +161,7 @@ function App() {
             </div>
             <div className="border-[1px] border-white rounded-xl p-4 hover:scale-105 transition-all ease-in-out duration-300">
               <label>4. Safety Tips</label>
-              <p className="font-light text-[1rem]">
+              <p className="font-normal text-[1rem]">
                 Always double-check the wallet addresses before making any
                 transactions. Ensure that you're sending funds to the correct
                 address to avoid loss of funds due to human error or phishing
@@ -172,9 +172,43 @@ function App() {
         </div>
       </div>
 
-      {/* <div className="card flex flex-wrap gap-4 p-8 my-[40px]" id="roadmap">
+      <div className="flex flex-col gap-4 p-8 my-[40px]" id="roadmap">
         <div className="text-[3rem] text-center uppercase">Our RoadMap</div>
-      </div> */}
+        <div className="flex flex-wrap gap-[80px] p-[40px] justify-center">
+          <div className="w-[400px] flex flex-col gap-4">
+            <label className="text-[2rem] font-medium">May 2024</label>
+            <p className="font-normal text-gray-300">
+              A concept of MHG is discussed with Team Members. Finding a
+              Perfect Solution to the Current Real World Issues.
+            </p>
+          </div>
+
+          <div className="w-[400px] flex flex-col gap-4">
+            <label className="text-[2rem] font-medium">August 2024</label>
+            <p className="font-normal text-gray-300">
+              Our ICO launched Late August.
+            </p>
+          </div>
+
+          <div className="w-[400px] flex flex-col gap-4">
+            <label className="text-[2rem] font-medium">October 2024</label>
+            <p className="font-normal text-gray-300">
+              We will be marketing in major news outlets such as Yahoo and other
+              big news companies. 100+ KOLs and Influencer Marketing will be
+              just small one part on our big marketing journey.
+            </p>
+          </div>
+
+          <div className="w-[400px] flex flex-col gap-4">
+            <label className="text-[2rem] font-medium">December 2024</label>
+            <p className="font-normal text-gray-300">
+              MHG will launch on Uniswap and then migrate to our own
+              exchange platform MHGSwap.
+            </p>
+          </div>
+
+        </div>
+      </div>
 
       <div className="card flex flex-wrap gap-4 p-8 my-[40px]" id="tokenomics">
         <img
@@ -187,9 +221,21 @@ function App() {
       <div className="card gap-4 flex flex-col p-8 my-[40px]" id="contact">
         <div className="text-[3rem] text-center uppercase">Our Community</div>
         <div className="picture-container my-4">
-          <img src="/images/comunity-1.jpeg" alt="Picture 1" className="picture"/>
-          <img src="/images/comunity-2.jpeg" alt="Picture 2" className="picture" />
-          <img src="/images/comunity-3.jpeg" alt="Picture 3" className="picture" />
+          <img
+            src="/images/comunity-1.jpeg"
+            alt="Picture 1"
+            className="picture"
+          />
+          <img
+            src="/images/comunity-2.jpeg"
+            alt="Picture 2"
+            className="picture"
+          />
+          <img
+            src="/images/comunity-3.jpeg"
+            alt="Picture 3"
+            className="picture"
+          />
           <img src="/images/about.jpeg" alt="Picture 4" className="picture" />
         </div>
         <div className="flex flex-wrap gap-4 justify-evenly my-[40px]">

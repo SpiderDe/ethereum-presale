@@ -7,7 +7,18 @@ function App() {
 
   return (
     <div className="w-full h-full bg-[#0244a566] overflow-auto overflow-x-hidden px-[10px] lg:px-[15%]">
-      <div className="flex justify-between items-center p-4">
+      <video
+        autoPlay
+        loop
+        className="w-screen h-screen absolute top-0 left-0 max-md:hidden object-cover"
+        muted
+        playsInline
+        preload="auto"
+      >
+        <track default="" kind="captions" src />
+        <source src="/videos/mmtr-bck.mp4" type="video/mp4" />
+      </video>
+      <div className="relative flex justify-between items-center p-4 z-40">
         <img src="/images/label.png" width="140px"></img>
         <div className="flex gap-8">
           <a href="#home">
@@ -47,7 +58,7 @@ function App() {
       </div>
 
       <div
-        className="flex flex-wrap justify-around py-[100px] gap-[20px]"
+        className="relative flex flex-wrap justify-around py-[100px] gap-[20px]"
         id="home"
       >
         <div className="flex justify-center">
@@ -75,14 +86,14 @@ function App() {
         </div>
       </div>
 
-      <div className="text-center">
+      <div className="relative text-center">
         One of cryptos most significant cultural icons and the mascot of BASE
         chain
       </div>
 
-      <div className="border-[1px] border-white my-[80px]"></div>
+      <div className="relative border-[1px] border-white my-[80px]"></div>
 
-      <div className="card flex flex-wrap gap-4 p-8" id="about">
+      <div className="card relative flex flex-wrap gap-4 p-8" id="about">
         <div className="flex-1 flex flex-col gap-8">
           <div className="text-[3rem] text-center uppercase">About Us</div>
           <p className="font-normal">
@@ -110,7 +121,7 @@ function App() {
         </div>
       </div>
 
-      <div className="card flex flex-wrap gap-4 p-8 my-[40px]" id="about">
+      <div className="card relative flex flex-wrap gap-4 p-8 my-[40px]" id="about">
         <div className="flex items-center">
           <img
             className="pulsate rounded-3xl"
@@ -172,14 +183,14 @@ function App() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-4 p-8 my-[40px]" id="roadmap">
+      <div className="relative flex flex-col gap-4 p-8 my-[40px]" id="roadmap">
         <div className="text-[3rem] text-center uppercase">Our RoadMap</div>
         <div className="flex flex-wrap gap-[80px] p-[40px] justify-center">
           <div className="w-[400px] flex flex-col gap-4">
             <label className="text-[2rem] font-medium">May 2024</label>
             <p className="font-normal text-gray-300">
-              A concept of MHG is discussed with Team Members. Finding a
-              Perfect Solution to the Current Real World Issues.
+              A concept of MHG is discussed with Team Members. Finding a Perfect
+              Solution to the Current Real World Issues.
             </p>
           </div>
 
@@ -202,15 +213,14 @@ function App() {
           <div className="w-[400px] flex flex-col gap-4">
             <label className="text-[2rem] font-medium">December 2024</label>
             <p className="font-normal text-gray-300">
-              MHG will launch on Uniswap and then migrate to our own
-              exchange platform MHGSwap.
+              MHG will launch on Uniswap and then migrate to our own exchange
+              platform MHGSwap.
             </p>
           </div>
-
         </div>
       </div>
 
-      <div className="card flex flex-wrap gap-4 p-8 my-[40px]" id="tokenomics">
+      <div className="card relative flex flex-wrap gap-4 p-8 my-[40px]" id="tokenomics">
         <img
           className="rounded-3xl hover:scale-105 transition-all ease-in-out duration-300"
           src="/images/tokenomics.png"
@@ -218,7 +228,192 @@ function App() {
         ></img>
       </div>
 
-      <div className="card gap-4 flex flex-col p-8 my-[40px]" id="contact">
+      <div className="relative flex flex-wrap gap-4 my-[40px]" id="faq">
+        <div className="relative w-full px-6 pt-10 pb-8 mt-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
+          <div className="mx-auto px-5">
+            <div className="flex flex-col items-center">
+              <h2 className="mt-5 text-center text-3xl font-bold tracking-tight md:text-5xl">
+                FAQ
+              </h2>
+            </div>
+            <div className="mx-auto mt-8 grid max-w-xl divide-y divide-neutral-200">
+              <div className="py-5">
+                <details className="group">
+                  <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
+                    <span> How does the billing work?</span>
+                    <span className="transition group-open:rotate-180">
+                      <svg
+                        fill="none"
+                        height="24"
+                        shape-rendering="geometricPrecision"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path d="M6 9l6 6 6-6"></path>
+                      </svg>
+                    </span>
+                  </summary>
+                  <p className="group-open:animate-fadeIn mt-3 font-normal text-gray-300">
+                    Springerdata offers a variety of billing options, including
+                    monthly and annual subscription plans, as well as
+                    pay-as-you-go pricing for certain services. Payment is
+                    typically made through a credit card or other secure online
+                    payment method.
+                  </p>
+                </details>
+              </div>
+              <div className="py-5">
+                <details className="group">
+                  <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
+                    <span> Can I get a refund for my subscription?</span>
+                    <span className="transition group-open:rotate-180">
+                      <svg
+                        fill="none"
+                        height="24"
+                        shape-rendering="geometricPrecision"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path d="M6 9l6 6 6-6"></path>
+                      </svg>
+                    </span>
+                  </summary>
+                  <p className="group-open:animate-fadeIn mt-3 font-normal text-gray-300">
+                    We offer a 30-day money-back guarantee for most of its
+                    subscription plans. If you are not satisfied with your
+                    subscription within the first 30 days, you can request a
+                    full refund. Refunds for subscriptions that have been active
+                    for longer than 30 days may be considered on a case-by-case
+                    basis.
+                  </p>
+                </details>
+              </div>
+              <div className="py-5">
+                <details className="group">
+                  <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
+                    <span> How do I cancel my subscription?</span>
+                    <span className="transition group-open:rotate-180">
+                      <svg
+                        fill="none"
+                        height="24"
+                        shape-rendering="geometricPrecision"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path d="M6 9l6 6 6-6"></path>
+                      </svg>
+                    </span>
+                  </summary>
+                  <p className="group-open:animate-fadeIn mt-3 font-normal text-gray-300">
+                    To cancel your subscription, you can log in to your account
+                    and navigate to the subscription management page. From
+                    there, you should be able to cancel your subscription and
+                    stop future billing.
+                  </p>
+                </details>
+              </div>
+              <div className="py-5">
+                <details className="group">
+                  <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
+                    <span> Is there a free trial?</span>
+                    <span className="transition group-open:rotate-180">
+                      <svg
+                        fill="none"
+                        height="24"
+                        shape-rendering="geometricPrecision"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path d="M6 9l6 6 6-6"></path>
+                      </svg>
+                    </span>
+                  </summary>
+                  <p className="group-open:animate-fadeIn mt-3 font-normal text-gray-300">
+                    We offer a free trial of our software for a limited time.
+                    During the trial period, you will have access to a limited
+                    set of features and functionality, but you will not be
+                    charged.
+                  </p>
+                </details>
+              </div>
+              <div className="py-5">
+                <details className="group">
+                  <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
+                    <span> How do I contact support?</span>
+                    <span className="transition group-open:rotate-180">
+                      <svg
+                        fill="none"
+                        height="24"
+                        shape-rendering="geometricPrecision"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path d="M6 9l6 6 6-6"></path>
+                      </svg>
+                    </span>
+                  </summary>
+                  <p className="group-open:animate-fadeIn mt-3 font-normal text-gray-300">
+                    If you need help with our platform or have any other
+                    questions, you can contact the company's support team by
+                    submitting a support request through the website or by
+                    emailing support@ourwebsite.com.
+                  </p>
+                </details>
+              </div>
+              <div className="py-5">
+                <details className="group">
+                  <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
+                    <span> Do you offer any discounts or promotions?</span>
+                    <span className="transition group-open:rotate-180">
+                      <svg
+                        fill="none"
+                        height="24"
+                        shape-rendering="geometricPrecision"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path d="M6 9l6 6 6-6"></path>
+                      </svg>
+                    </span>
+                  </summary>
+                  <p className="group-open:animate-fadeIn mt-3 font-normal text-gray-300">
+                    We may offer discounts or promotions from time to time. To
+                    stay up-to-date on the latest deals and special offers, you
+                    can sign up for the company's newsletter or follow it on
+                    social media.
+                  </p>
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="card relative gap-4 flex flex-col p-8 my-[40px]" id="contact">
         <div className="text-[3rem] text-center uppercase">Our Community</div>
         <div className="picture-container my-4">
           <img
@@ -254,7 +449,7 @@ function App() {
         </div>
       </div>
 
-      <div className="text-center my-[40px]">
+      <div className="relative text-center my-[40px]">
         Copyright © 2024. All rights reserved.
       </div>
     </div>

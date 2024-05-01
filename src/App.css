@@ -1,0 +1,39 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/public/images/IMG_0174.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: black;
+}
+
+nav {
+  opacity: 1;
+  transform: translateY(0px) translateZ(0px);
+}
+
+button:hover {
+  scale: 1.05;
+}
+
+.card {
+  background-color: rgb(2 68 165 / .5);
+  border-radius: 40px;
+}
+
+.pulsate {
+  animation: pulsate 2s infinite alternate;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1); /* Initial scale */
+  }
+  100% {
+    transform: scale(1.1); /* Final scale */
+  }
+}

@@ -16,7 +16,7 @@ function App() {
         preload="auto"
       >
         <track default="" kind="captions" src />
-        <source src="/videos/mmtr-bck.mp4" type="video/mp4" />
+        <source src="/videos/background.mp4" type="video/mp4"/>
       </video>
       <div className="relative flex justify-between items-center p-4 z-40">
         <img src="/images/label.png" width="140px"></img>

@@ -1,9 +1,7 @@
-import { useState } from "react";
 import "./App.css";
 import { DiscordIcon, TelegramIcon, TwitterIcon } from "./svgicon";
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <div className="w-full h-full bg-[#0244a566] overflow-auto overflow-x-hidden px-[10px] lg:px-[15%]">
@@ -11,7 +9,6 @@ function App() {
         autoPlay
         loop
         className="w-screen h-screen absolute top-0 left-0 max-md:hidden object-cover"
-        muted
         playsInline
         preload="auto"
       >
@@ -93,8 +90,8 @@ function App() {
 
       <div className="relative border-[1px] border-white my-[80px]"></div>
 
-      <div className="card relative flex flex-wrap gap-4 p-8" id="about">
-        <div className="flex-1 flex flex-col gap-8">
+      <div className="card relative flex flex-wrap gap-4 p-8 justify-center items-center" id="about">
+        <div className="flex-1 flex flex-col gap-8 min-w-[400px]">
           <div className="text-[3rem] text-center uppercase">About Us</div>
           <p className="font-normal">
             Money Hungry Gorillas (MHG) is a cryptocurrency token designed to
@@ -121,7 +118,7 @@ function App() {
         </div>
       </div>
 
-      <div className="card relative flex flex-wrap gap-4 p-8 my-[40px]" id="about">
+      <div className="card relative flex flex-wrap gap-4 p-8 my-[40px] justify-center" id="about">
         <div className="flex items-center">
           <img
             className="pulsate rounded-3xl"
@@ -130,7 +127,7 @@ function App() {
           ></img>
         </div>
 
-        <div className="flex-1 flex flex-col gap-8" id="how-to-buy">
+        <div className="flex-1 flex flex-col gap-8 min-w-[400px]" id="how-to-buy">
           <div className="text-[3rem] text-center uppercase">How to buy</div>
           <div className="flex flex-col gap-[20px]">
             <div className="border-[1px] border-white rounded-xl p-4 hover:scale-105 transition-all ease-in-out duration-300">

@@ -81,6 +81,9 @@ function App() {
           Connect Wallet
         </button>
       </div>
+      <div>
+        <img src="/images/baselogo.png" width="200px"></img>
+      </div>
 
       <div
         className="relative flex flex-wrap justify-around pt-[100px] pb-[50px] gap-[20px]"

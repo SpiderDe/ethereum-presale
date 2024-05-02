@@ -33,6 +33,19 @@ button:hover {
   border-radius: 40px;
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  animation: rotate 10s linear infinite; /* Rotate the component continuously */
+}
+
 .pulsate {
   animation: pulsate 2s infinite alternate;
 }

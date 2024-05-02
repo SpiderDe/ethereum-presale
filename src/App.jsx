@@ -1,8 +1,29 @@
+import { useEffect } from "react";
 import "./App.css";
-import { DiscordIcon, TelegramIcon, TwitterIcon } from "./svgicon";
+import {
+  DiscordIcon,
+  TelegramIcon,
+  TwitterIcon,
+  ContactEmailIcon,
+  ContactUserIcon,
+  ContactMessageIcon,
+} from "./svgicon";
 
 function App() {
+  useEffect(() => {
+    setTimeout(function () {
+      console.log("video play");
+      // const video = documen
+      document.querySelector("video").play();
+    }, 1000);
+  }, []);
 
+  const playBackground = () => {
+    console.log("click background");
+    // const video = document.getElementById("myVideo");
+    // video.play();
+    document.querySelector("video").play();
+  };
   return (
     <div className="w-full h-full bg-[#0244a566] overflow-auto overflow-x-hidden px-[10px] lg:px-[15%]">
       <video
@@ -11,10 +32,14 @@ function App() {
         className="w-screen h-screen absolute top-0 left-0 max-md:hidden object-cover"
         playsInline
         preload="auto"
+        id="myVideo"
       >
         <track default="" kind="captions" src />
-        <source src="/videos/background.mp4" type="video/mp4"/>
+        <source src="/videos/background.mp4" type="video/mp4" />
       </video>
+      {/* <audio autoPlay loop preload="auto">
+        <source src="/sounds/background.mp3" type="audio/mpeg" />
+      </audio> */}
       <div className="relative flex justify-between items-center p-4 z-40">
         <img src="/images/label.png" width="140px"></img>
         <div className="flex gap-8">
@@ -38,18 +63,18 @@ function App() {
               Roadmap
             </label>
           </a>
-          <a href="#tokenomics">
+          {/* <a href="#tokenomics">
             <label className="transition-all ease-in-out duration-300 hover:text-blue-800">
               Tokenomics
             </label>
-          </a>
+          </a> */}
           <a href="#contact">
             <label className="transition-all ease-in-out duration-300 hover:text-blue-800">
               Contact
             </label>
           </a>
         </div>
-        <button className="p-1 px-5 border-blue-500 border-[1px] rounded-2xl transition-all ease-in-out duration-300 text-white">
+        <button className="p-1 px-5 border-blue-500 border-[1px] rounded-2xl transition-all ease-in-out duration-300 text-white hover:text-blue-800">
           Connect Wallet
         </button>
       </div>
@@ -57,10 +82,11 @@ function App() {
       <div
         className="relative flex flex-wrap justify-around py-[100px] gap-[20px]"
         id="home"
+        onClick={playBackground}
       >
         <div className="flex justify-center">
           <img
-            className="hover:scale-110 transition-all ease-in-out duration-500"
+            className="rotating hover:scale-110 transition-all ease-in-out duration-500"
             src="/images/logo.png"
             width="500px"
           ></img>
@@ -90,7 +116,10 @@ function App() {
 
       <div className="relative border-[1px] border-white my-[80px]"></div>
 
-      <div className="card relative flex flex-wrap gap-4 p-8 justify-center items-center" id="about">
+      <div
+        className="card relative flex flex-wrap gap-4 p-8 justify-center items-center"
+        id="about"
+      >
         <div className="flex-1 flex flex-col gap-8 min-w-[400px]">
           <div className="text-[3rem] text-center uppercase">About Us</div>
           <p className="font-normal">
@@ -111,14 +140,17 @@ function App() {
         </div>
         <div className="flex items-center justify-center">
           <img
-            className="rounded-3xl transition-all ease-in-out duration-300 hover:scale-110"
+            className="rounded-3xl"
             src="/images/about.jpeg"
             width="600px"
           ></img>
         </div>
       </div>
 
-      <div className="card relative flex flex-wrap gap-4 p-8 my-[40px] justify-center" id="about">
+      <div
+        className="card relative flex flex-wrap gap-4 p-8 my-[40px] justify-center"
+        id="about"
+      >
         <div className="flex items-center">
           <img
             className="pulsate rounded-3xl"
@@ -127,7 +159,10 @@ function App() {
           ></img>
         </div>
 
-        <div className="flex-1 flex flex-col gap-8 min-w-[400px]" id="how-to-buy">
+        <div
+          className="flex-1 flex flex-col gap-8 min-w-[400px]"
+          id="how-to-buy"
+        >
           <div className="text-[3rem] text-center uppercase">How to buy</div>
           <div className="flex flex-col gap-[20px]">
             <div className="border-[1px] border-white rounded-xl p-4 hover:scale-105 transition-all ease-in-out duration-300">
@@ -180,7 +215,10 @@ function App() {
         </div>
       </div>
 
-      <div className="relative flex flex-col gap-4 p-8 my-[40px]" id="roadmap">
+      <div
+        className="relative card flex flex-col gap-4 p-8 my-[40px]"
+        id="roadmap"
+      >
         <div className="text-[3rem] text-center uppercase">Our RoadMap</div>
         <div className="flex flex-wrap gap-[80px] p-[40px] justify-center">
           <div className="w-[400px] flex flex-col gap-4">
@@ -217,20 +255,23 @@ function App() {
         </div>
       </div>
 
-      <div className="card relative flex flex-wrap gap-4 p-8 my-[40px]" id="tokenomics">
+      {/* <div
+        className="card relative flex flex-wrap gap-4 p-8 my-[40px]"
+        id="tokenomics"
+      >
         <img
           className="rounded-3xl hover:scale-105 transition-all ease-in-out duration-300"
           src="/images/tokenomics.png"
           width="100%"
         ></img>
-      </div>
+      </div> */}
 
-      <div className="relative flex flex-wrap gap-4 my-[40px]" id="faq">
+      <div className="relative card flex flex-wrap gap-4 my-[40px]" id="faq">
         <div className="relative w-full px-6 pt-10 pb-8 mt-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
           <div className="mx-auto px-5">
             <div className="flex flex-col items-center">
               <h2 className="mt-5 text-center text-3xl font-bold tracking-tight md:text-5xl">
-                FAQ
+                Frequently asked questions
               </h2>
             </div>
             <div className="mx-auto mt-8 grid max-w-xl divide-y divide-neutral-200">
@@ -410,8 +451,11 @@ function App() {
         </div>
       </div>
 
-      <div className="card relative gap-4 flex flex-col p-8 my-[40px]" id="contact">
-        <div className="text-[3rem] text-center uppercase">Our Community</div>
+      <div
+        className="card relative gap-4 flex flex-col p-8 my-[40px]"
+        id="contact"
+      >
+        <div className="text-[3rem] text-center uppercase">Contact</div>
         <div className="picture-container my-4">
           <img
             src="/images/comunity-1.jpeg"
@@ -430,23 +474,83 @@ function App() {
           />
           <img src="/images/about.jpeg" alt="Picture 4" className="picture" />
         </div>
-        <div className="flex flex-wrap gap-4 justify-evenly my-[40px]">
-          <button className="uppercase flex gap-3 items-center p-1 px-5 border-blue-500 border-[1px] rounded-2xl transition-all ease-in-out duration-300">
-            <label className="uppercase">Telegram</label>
-            <TelegramIcon />
-          </button>
-          <button className="uppercase flex gap-3 items-center p-1 px-5 border-blue-500 border-[1px] rounded-2xl transition-all ease-in-out duration-300">
-            <label className="uppercase">Twitter</label>
-            <TwitterIcon />
-          </button>
-          <button className="uppercase flex gap-3 items-center p-1 px-5 border-blue-500 border-[1px] rounded-2xl transition-all ease-in-out duration-300">
-            <label className="uppercase">discord</label>
-            <DiscordIcon />
-          </button>
+        <div className="flex flex-wrap">
+          <div className="flex flex-col gap-4 my-[40px] min-w-[200px] flex-1">
+            <label className="text-[2rem]">quick links</label>
+            <a href="#home">
+              <label className="font-thin hover:text-blue-800">home</label>
+            </a>
+            <a href="#about">
+              <label className="font-thin hover:text-blue-800">about</label>
+            </a>
+            <a href="#how-to-buy">
+              <label className="font-thin hover:text-blue-800">
+                how to buy
+              </label>
+            </a>
+            <a href="#roadmap">
+              <label className="font-thin hover:text-blue-800">roadmap</label>
+            </a>
+          </div>
+
+          <div className="flex flex-col gap-4 my-[40px] min-w-[200px] flex-1">
+            <label className="text-[2rem]">community</label>
+            <button className="uppercase flex gap-3 items-center justify-center p-1 px-5 border-green-500 w-[150px] border-[1px] rounded-2xl transition-all ease-in-out duration-300">
+              <label className="uppercase font-thin hover:text-blue-800">Telegram</label>
+              <TelegramIcon />
+            </button>
+            <button className="uppercase flex gap-3 items-center justify-center p-1 px-5 border-green-500 w-[150px] border-[1px] rounded-2xl transition-all ease-in-out duration-300">
+              <label className="uppercase font-thin hover:text-blue-800">Twitter</label>
+              <TwitterIcon />
+            </button>
+            <button className="uppercase flex gap-3 items-center justify-center p-1 px-5 border-green-500 w-[150px] border-[1px] rounded-2xl transition-all ease-in-out duration-300">
+              <label className="uppercase font-thin hover:text-blue-800">discord</label>
+              <DiscordIcon />
+            </button>
+          </div>
+
+          <div className="flex flex-col gap-4 my-[40px] min-w-[400px] flex-1">
+            <label className="text-[2rem]">
+              if you have question, feel free to contact us
+            </label>
+            <div className="flex flex-col gap-4 font-thin">
+              <div className="flex gap-4">
+                <div className="flex flex-1 gap-2 items-center border-b-2 border-green-500">
+                  <ContactUserIcon />
+                  <input
+                    type="text"
+                    placeholder="Full Name"
+                    className="outline-none bg-transparent flex-1 w-[50px]"
+                  ></input>
+                </div>
+                <div className="flex flex-1 gap-2 items-center border-b-2 border-green-500">
+                  <ContactEmailIcon />
+                  <input
+                    type="text"
+                    placeholder="Email"
+                    className="outline-none bg-transparent flex-1 w-[50px]"
+                  ></input>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 border-b-2 border-green-500">
+                <ContactMessageIcon />
+                <input
+                  type="text"
+                  placeholder="Type Your Message"
+                  className="outline-none bg-transparent flex-1 w-[100px]"
+                ></input>
+              </div>
+              <button className="bg-green-500 rounded-full p-1">
+                Send Message
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="relative text-center my-[40px]">
+      <div className="relative border-[1px] border-white my-[10px]"></div>
+      <div className="relative text-center my-[20px] p-[20px]">
         Copyright © 2024. All rights reserved.
       </div>
     </div>

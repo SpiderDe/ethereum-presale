@@ -7,6 +7,7 @@ import {
   ContactEmailIcon,
   ContactUserIcon,
   ContactMessageIcon,
+  FaqArrow,
 } from "./svgicon";
 
 function App() {
@@ -122,7 +123,7 @@ function App() {
       >
         <div className="flex-1 flex flex-col gap-8 min-w-[400px]">
           <div className="text-[3rem] text-center uppercase">About Us</div>
-          <p className="font-normal">
+          <p className="font-normal text-gray-300">
             Money Hungry Gorillas (MHG) is a cryptocurrency token designed to
             provide users with a unique and innovative financial experience. As
             its name suggests, MHG embodies a spirit of financial ambition and
@@ -167,7 +168,7 @@ function App() {
           <div className="flex flex-col gap-[20px]">
             <div className="border-[1px] border-white rounded-xl p-4 hover:scale-105 transition-all ease-in-out duration-300">
               <label>1. Setting up a Cryptocurrency Wallet</label>
-              <p className="font-normal text-[1rem]">
+              <p className="font-normal text-[1rem] text-gray-300">
                 Choose a reputable cryptocurrency wallet that supports
                 Ethereum-based tokens like MHG. Popular options include
                 MetaMask, Trust Wallet, and MyEtherWallet. Visit the official
@@ -179,7 +180,7 @@ function App() {
             </div>
             <div className="border-[1px] border-white rounded-xl p-4 hover:scale-105 transition-all ease-in-out duration-300">
               <label>2. Adding Ethereum to Your Wallet</label>
-              <p className="font-normal text-[1rem]">
+              <p className="font-normal text-[1rem] text-gray-300">
                 Once your wallet is set up, you'll need to acquire Ethereum
                 (ETH) to exchange for MHG tokens. You can purchase Ethereum from
                 a cryptocurrency exchange such as Coinbase, Binance, or Kraken.
@@ -193,7 +194,7 @@ function App() {
                 3. Converting Ethereum to{" "}
                 <img src="/images/logo.png" width="40px"></img>
               </div>
-              <p className="font-normal text-[1rem]">
+              <p className="font-normal text-[1rem] text-gray-300">
                 Click the 'Connect Wallet' button to connect your wallet to the
                 page and enter the amount of Ether you want to pay in the
                 purchase widget. Then, the amount of tokens you will receive
@@ -204,7 +205,7 @@ function App() {
             </div>
             <div className="border-[1px] border-white rounded-xl p-4 hover:scale-105 transition-all ease-in-out duration-300">
               <label>4. Safety Tips</label>
-              <p className="font-normal text-[1rem]">
+              <p className="font-normal text-[1rem] text-gray-300">
                 Always double-check the wallet addresses before making any
                 transactions. Ensure that you're sending funds to the correct
                 address to avoid loss of funds due to human error or phishing
@@ -280,19 +281,7 @@ function App() {
                   <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                     <span> How does the billing work?</span>
                     <span className="transition group-open:rotate-180">
-                      <svg
-                        fill="none"
-                        height="24"
-                        shape-rendering="geometricPrecision"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                        viewBox="0 0 24 24"
-                        width="24"
-                      >
-                        <path d="M6 9l6 6 6-6"></path>
-                      </svg>
+                      <FaqArrow />
                     </span>
                   </summary>
                   <p className="group-open:animate-fadeIn mt-3 font-normal text-gray-300">
@@ -309,19 +298,7 @@ function App() {
                   <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                     <span> Can I get a refund for my subscription?</span>
                     <span className="transition group-open:rotate-180">
-                      <svg
-                        fill="none"
-                        height="24"
-                        shape-rendering="geometricPrecision"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                        viewBox="0 0 24 24"
-                        width="24"
-                      >
-                        <path d="M6 9l6 6 6-6"></path>
-                      </svg>
+                      <FaqArrow />
                     </span>
                   </summary>
                   <p className="group-open:animate-fadeIn mt-3 font-normal text-gray-300">
@@ -339,19 +316,7 @@ function App() {
                   <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                     <span> How do I cancel my subscription?</span>
                     <span className="transition group-open:rotate-180">
-                      <svg
-                        fill="none"
-                        height="24"
-                        shape-rendering="geometricPrecision"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                        viewBox="0 0 24 24"
-                        width="24"
-                      >
-                        <path d="M6 9l6 6 6-6"></path>
-                      </svg>
+                      <FaqArrow />
                     </span>
                   </summary>
                   <p className="group-open:animate-fadeIn mt-3 font-normal text-gray-300">
@@ -367,19 +332,7 @@ function App() {
                   <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                     <span> Is there a free trial?</span>
                     <span className="transition group-open:rotate-180">
-                      <svg
-                        fill="none"
-                        height="24"
-                        shape-rendering="geometricPrecision"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                        viewBox="0 0 24 24"
-                        width="24"
-                      >
-                        <path d="M6 9l6 6 6-6"></path>
-                      </svg>
+                      <FaqArrow />
                     </span>
                   </summary>
                   <p className="group-open:animate-fadeIn mt-3 font-normal text-gray-300">
@@ -395,19 +348,7 @@ function App() {
                   <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                     <span> How do I contact support?</span>
                     <span className="transition group-open:rotate-180">
-                      <svg
-                        fill="none"
-                        height="24"
-                        shape-rendering="geometricPrecision"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                        viewBox="0 0 24 24"
-                        width="24"
-                      >
-                        <path d="M6 9l6 6 6-6"></path>
-                      </svg>
+                      <FaqArrow />
                     </span>
                   </summary>
                   <p className="group-open:animate-fadeIn mt-3 font-normal text-gray-300">
@@ -423,19 +364,7 @@ function App() {
                   <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                     <span> Do you offer any discounts or promotions?</span>
                     <span className="transition group-open:rotate-180">
-                      <svg
-                        fill="none"
-                        height="24"
-                        shape-rendering="geometricPrecision"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                        viewBox="0 0 24 24"
-                        width="24"
-                      >
-                        <path d="M6 9l6 6 6-6"></path>
-                      </svg>
+                      <FaqArrow />
                     </span>
                   </summary>
                   <p className="group-open:animate-fadeIn mt-3 font-normal text-gray-300">
@@ -494,17 +423,23 @@ function App() {
           </div>
 
           <div className="flex flex-col gap-4 my-[40px] min-w-[200px] flex-1">
-            <label className="text-[2rem]">community</label>
+            <label className="text-[2rem]">social media</label>
             <button className="uppercase flex gap-3 items-center justify-center p-1 px-5 border-green-500 w-[150px] border-[1px] rounded-2xl transition-all ease-in-out duration-300">
-              <label className="uppercase font-thin hover:text-blue-800">Telegram</label>
+              <label className="uppercase font-thin hover:text-blue-800">
+                Telegram
+              </label>
               <TelegramIcon />
             </button>
             <button className="uppercase flex gap-3 items-center justify-center p-1 px-5 border-green-500 w-[150px] border-[1px] rounded-2xl transition-all ease-in-out duration-300">
-              <label className="uppercase font-thin hover:text-blue-800">Twitter</label>
+              <label className="uppercase font-thin hover:text-blue-800">
+                Twitter
+              </label>
               <TwitterIcon />
             </button>
             <button className="uppercase flex gap-3 items-center justify-center p-1 px-5 border-green-500 w-[150px] border-[1px] rounded-2xl transition-all ease-in-out duration-300">
-              <label className="uppercase font-thin hover:text-blue-800">discord</label>
+              <label className="uppercase font-thin hover:text-blue-800">
+                discord
+              </label>
               <DiscordIcon />
             </button>
           </div>

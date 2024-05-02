@@ -403,7 +403,7 @@ function App() {
           />
           <img src="/images/about.jpeg" alt="Picture 4" className="picture" />
         </div>
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap p-[40px]">
           <div className="flex flex-col gap-4 my-[40px] min-w-[200px] flex-1">
             <label className="text-[2rem]">quick links</label>
             <a href="#home">

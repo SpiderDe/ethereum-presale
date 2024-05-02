@@ -28,14 +28,16 @@ function App() {
       <video
         autoPlay
         loop
-        className="w-screen h-screen absolute top-0 left-0 max-md:hidden object-cover"
+        className={`w-screen ${
+          isPlaying ? "h-screen" : "h-0"
+        } absolute top-0 left-0 max-md:hidden object-cover`}
         playsInline
-        preload="auto"
         id="myVideo"
       >
         <track default="" kind="captions" src />
         <source src="/videos/background.mp4" type="video/mp4" />
       </video>
+
       {/* <audio autoPlay loop preload="auto">
         <source src="/sounds/background.mp3" type="audio/mpeg" />
       </audio> */}
@@ -94,7 +96,10 @@ function App() {
         <div className="flex flex-col justify-center gap-[20px]">
           <div className="flex gap-4 items-center">
             <label className="uppercase">introducing</label>
-            <VideoPlayPauseButton handlePlay={playBackground} isPlayed={isPlaying} />
+            <VideoPlayPauseButton
+              handlePlay={playBackground}
+              isPlayed={isPlaying}
+            />
           </div>
           <img
             className="transition-all ease-in-out duration-300 hover:scale-110 pulsate"

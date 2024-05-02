@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import "./App.css";
 import {
@@ -10,14 +10,19 @@ import {
   ContactMessageIcon,
   FaqArrow,
 } from "./svgicon";
+import VideoPlayPauseButton from "./components/VideoPlayPauseButton";
 
 function App() {
   const isMobile = useMediaQuery({ query: `(max-width: 991px)` });
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  const playBackground = () => {
+  const playBackground = (setPlay) => {
     console.log("click background");
-    document.querySelector("video").play();
+    if (setPlay == true) document.querySelector("video").play();
+    else document.querySelector("video").pause();
+    setIsPlaying(setPlay);
   };
+
   return (
     <div className="w-full h-full bg-[#0244a566] overflow-auto overflow-x-hidden px-[10px] lg:px-[15%]">
       <video
@@ -78,7 +83,6 @@ function App() {
       <div
         className="relative flex flex-wrap justify-around py-[100px] gap-[20px]"
         id="home"
-        onClick={playBackground}
       >
         <div className="flex justify-center">
           <img
@@ -88,7 +92,10 @@ function App() {
           ></img>
         </div>
         <div className="flex flex-col justify-center gap-[20px]">
-          <label className="uppercase">introducing</label>
+          <div className="flex gap-4 items-center">
+            <label className="uppercase">introducing</label>
+            <VideoPlayPauseButton handlePlay={playBackground} isPlayed={isPlaying} />
+          </div>
           <img
             className="transition-all ease-in-out duration-300 hover:scale-110 pulsate"
             src="/images/label.png"
@@ -379,7 +386,7 @@ function App() {
         className="card relative gap-4 flex flex-col p-8 my-[40px]"
         id="contact"
       >
-        <div className="text-[3rem] text-center uppercase">Contact</div>
+        <div className="text-[3rem] text-center uppercase">Contact US</div>
         <div className="picture-container my-4">
           <img
             src="/images/comunity-1.jpeg"

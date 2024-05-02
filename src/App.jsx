@@ -82,7 +82,7 @@ function App() {
         </button>
       </div>
       <div>
-        <img src="/images/baselogo.png" className="relative" width="200px"></img>
+        <img src="/images/baselogo.png" className="relative ml-[20px]" width="160px"></img>
       </div>
 
       <div

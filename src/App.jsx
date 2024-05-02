@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useMediaQuery } from "react-responsive";
 import "./App.css";
 import {
   DiscordIcon,
@@ -11,18 +12,10 @@ import {
 } from "./svgicon";
 
 function App() {
-  useEffect(() => {
-    setTimeout(function () {
-      console.log("video play");
-      // const video = documen
-      document.querySelector("video").play();
-    }, 1000);
-  }, []);
+  const isMobile = useMediaQuery({ query: `(max-width: 991px)` });
 
   const playBackground = () => {
     console.log("click background");
-    // const video = document.getElementById("myVideo");
-    // video.play();
     document.querySelector("video").play();
   };
   return (
@@ -43,38 +36,40 @@ function App() {
       </audio> */}
       <div className="relative flex justify-between items-center p-4 z-40">
         <img src="/images/label.png" width="140px"></img>
-        <div className="flex gap-8">
-          <a href="#home">
-            <label className="transition-all ease-in-out duration-300 hover:text-blue-800">
-              Home
-            </label>
-          </a>
-          <a href="#about">
-            <label className="transition-all ease-in-out duration-300 hover:text-blue-800">
-              About
-            </label>
-          </a>
-          <a href="#how-to-buy">
-            <label className="transition-all ease-in-out duration-300 hover:text-blue-800">
-              How to buy
-            </label>
-          </a>
-          <a href="#roadmap">
-            <label className="transition-all ease-in-out duration-300 hover:text-blue-800">
-              Roadmap
-            </label>
-          </a>
-          {/* <a href="#tokenomics">
+        {!isMobile && (
+          <div className="flex gap-8">
+            <a href="#home">
+              <label className="transition-all ease-in-out duration-300 hover:text-blue-800">
+                Home
+              </label>
+            </a>
+            <a href="#about">
+              <label className="transition-all ease-in-out duration-300 hover:text-blue-800">
+                About
+              </label>
+            </a>
+            <a href="#how-to-buy">
+              <label className="transition-all ease-in-out duration-300 hover:text-blue-800">
+                How to buy
+              </label>
+            </a>
+            <a href="#roadmap">
+              <label className="transition-all ease-in-out duration-300 hover:text-blue-800">
+                Roadmap
+              </label>
+            </a>
+            {/* <a href="#tokenomics">
             <label className="transition-all ease-in-out duration-300 hover:text-blue-800">
               Tokenomics
             </label>
           </a> */}
-          <a href="#contact">
-            <label className="transition-all ease-in-out duration-300 hover:text-blue-800">
-              Contact
-            </label>
-          </a>
-        </div>
+            <a href="#contact">
+              <label className="transition-all ease-in-out duration-300 hover:text-blue-800">
+                Contact
+              </label>
+            </a>
+          </div>
+        )}
         <button className="p-1 px-5 border-blue-500 border-[1px] rounded-2xl transition-all ease-in-out duration-300 text-white hover:text-blue-800">
           Connect Wallet
         </button>

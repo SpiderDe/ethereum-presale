@@ -77,13 +77,13 @@ function App() {
             </a>
           </div>
         )}
-        <button className="p-1 px-5 border-blue-500 border-[1px] rounded-2xl transition-all ease-in-out duration-300 text-white hover:text-blue-800">
+        <button className="p-1 px-5 border-green-500 border-[1px] rounded-2xl transition-all ease-in-out duration-300 text-white hover:text-blue-800">
           Connect Wallet
         </button>
       </div>
 
       <div
-        className="relative flex flex-wrap justify-around py-[100px] gap-[20px]"
+        className="relative flex flex-wrap justify-around pt-[100px] pb-[50px] gap-[20px]"
         id="home"
       >
         <div className="flex justify-center">
@@ -96,10 +96,10 @@ function App() {
         <div className="flex flex-col justify-center gap-[20px]">
           <div className="flex gap-4 items-center">
             <label className="uppercase">introducing</label>
-            <VideoPlayPauseButton
+            {/* <VideoPlayPauseButton
               handlePlay={playBackground}
               isPlayed={isPlaying}
-            />
+            /> */}
           </div>
           <img
             className="transition-all ease-in-out duration-300 hover:scale-110 pulsate"
@@ -117,11 +117,19 @@ function App() {
         </div>
       </div>
 
-      <div className="relative text-center">
-        One of cryptos most significant cultural icons and the mascot of BASE
-        chain
+      <div className="flex flex-col items-center gap-4">
+        <div className="flex justify-center items-center gap-4 border-[1px] border-green-500 p-4 rounded-full">
+          <VideoPlayPauseButton
+            handlePlay={playBackground}
+            isPlayed={isPlaying}
+          />
+          <label className="relative text-center">MHGorillas' Song and Video</label>
+        </div>
+        <div className="relative text-center">
+          One of cryptos most significant cultural icons and the mascot of BASE
+          chain
+        </div>
       </div>
-
       <div className="relative border-[1px] border-white my-[80px]"></div>
 
       <div

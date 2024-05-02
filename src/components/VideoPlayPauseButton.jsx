@@ -10,7 +10,7 @@ function VideoPlayPauseButton({handlePlay, isPlayed}) {
 
   return (
     <button
-      className="relative flex items-center justify-center w-12 h-12 bg-green-500 rounded-full focus:outline-none"
+      className="relative flex items-center justify-center w-12 h-12 bg-blue-500 rounded-full focus:outline-none"
       onClick={togglePlay}
     >
       <svg
@@ -32,7 +32,7 @@ function VideoPlayPauseButton({handlePlay, isPlayed}) {
         )}
       </svg>
       {!isPlaying && (
-        <div className="absolute w-12 h-12 bg-green-500 rounded-full opacity-50 animate-ping"></div>
+        <div className="absolute w-12 h-12 bg-blue-500 rounded-full opacity-50 animate-ping"></div>
       )}
     </button>
   );

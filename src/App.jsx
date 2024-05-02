@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import "./App.css";
 import {
@@ -37,10 +37,6 @@ function App() {
         <track default="" kind="captions" src />
         <source src="/videos/background.mp4" type="video/mp4" />
       </video>
-
-      {/* <audio autoPlay loop preload="auto">
-        <source src="/sounds/background.mp3" type="audio/mpeg" />
-      </audio> */}
       <div className="relative flex justify-between items-center p-4 z-40">
         <img src="/images/label.png" width="140px"></img>
         {!isMobile && (
@@ -99,10 +95,6 @@ function App() {
         <div className="flex flex-col justify-center gap-[20px]">
           <div className="flex gap-4 items-center">
             <label className="uppercase">introducing</label>
-            {/* <VideoPlayPauseButton
-              handlePlay={playBackground}
-              isPlayed={isPlaying}
-            /> */}
           </div>
           <img
             className="transition-all ease-in-out duration-300 hover:scale-110 pulsate"
